@@ -42,7 +42,7 @@ date,ticker,open,high,low,close,adjust_price_f,volume
 
 ## 股票 vs 对照数据
 
-平台已内置 `shanghai_index.csv` 作为默认上证指数数据。导入股票 CSV 后，Summary table 会自动为每只股票计算 Alpha 因子和 Beta。
+平台已内置 `data/samples/shanghai_index.csv` 作为默认上证指数数据。导入股票 CSV 后，Summary table 会自动为每只股票计算 Alpha 因子和 Beta。
 
 左侧“对照数据窗口”是独立的关系拟合工具，可以上传另一个股票、指数、行业指数、因子、商品、汇率或其他资产数据，用来和主数据做同日收益率散点图与线性拟合；它不会改变 Summary table 中默认以上证指数计算的 Alpha/Beta。
 
@@ -59,7 +59,7 @@ Summary table 会对齐股票与内置上证指数的同一交易日收益率，
 
 Alpha/Beta 功能默认使用内置上证指数。对照窗口如果上传了自己的 CSV，会优先把其中的上证指数、上证综指、沪指、`SH000001` 或 `000001.SH` 识别为对照序列；如果没有这些名称，可以在“对照序列”里手动选择，用于散点图和关系拟合。
 
-`benchmark_sample.csv` 是一个模拟对照数据文件，只用于测试功能，不是真实市场数据。
+`data/samples/benchmark_sample.csv` 是一个模拟对照数据文件，只用于测试功能，不是真实市场数据。
 
 ## 指标说明
 
@@ -155,7 +155,7 @@ python3 build_akshare_quality_dataset.py \
 
 ```bash
 python3 train_quality_trend_model.py \
-  --output-dir model_outputs_quality_trend_change_hgb_v1 \
+  --output-dir "results/model outputs/model_outputs_quality_trend_change_hgb_v1" \
   --model hgb \
   --target future_change \
   --future-quarters 4 \
@@ -164,9 +164,9 @@ python3 train_quality_trend_model.py \
 
 当前保留模型：
 
-- `model_outputs_quality_trend_change_hgb_v1/`：非线性财务趋势模型，排序效果略强。
-- `model_outputs_quality_trend_change_ridge_v1/`：线性基准模型，R² 略强且更容易解释。
-- 对比表：`quality_trend_model_comparison.csv`
+- `results/model outputs/model_outputs_quality_trend_change_hgb_v1/`：非线性财务趋势模型，排序效果略强。
+- `results/model outputs/model_outputs_quality_trend_change_ridge_v1/`：线性基准模型，R² 略强且更容易解释。
+- 对比表：`data/samples/quality_trend_model_comparison.csv`
 
 样本外结果：
 
@@ -196,12 +196,12 @@ HGB 财务趋势信号验证结果：
 
 验证输出目录：
 
-- `quality_signal_return_validation_hgb/`
-- `quality_signal_return_validation_ridge/`
+- `results/validation/quality_signal_return_validation_hgb/`
+- `results/validation/quality_signal_return_validation_ridge/`
 
 前端测试样本：
 
-- `quality_trend_sample.csv`
+- `data/samples/quality_trend_sample.csv`
 
 可视化平台已加入“财务趋势预测”板块。上传含 `quality_` 财务因子、`statDate`/`pubDate` 的 CSV 后，会显示：
 

@@ -1783,7 +1783,7 @@ function renderPairSsdTable() {
   els.pairSsdHead.innerHTML = "<tr><th>目标股票</th><th>排名</th><th>股票池代码</th><th>名称</th><th>SSD</th><th>重叠天数</th><th>区间</th><th>目标归一终值</th><th>候选归一终值</th></tr>";
   const results = state.pairSsdResults || [];
   if (!window.pairTradingPool) {
-    els.pairSsdBody.innerHTML = '<tr><td class="empty-state" colspan="9">未加载股票池数据，请确认 pair_pool_data.js 存在。</td></tr>';
+    els.pairSsdBody.innerHTML = '<tr><td class="empty-state" colspan="9">未加载股票池数据，请确认 data/frontend/pair_pool_data.js 存在。</td></tr>';
     els.pairSsdSubtitle.textContent = "需要先加载代表性股票池价格序列。";
     return;
   }
@@ -2276,7 +2276,7 @@ els.logReturnBtn.addEventListener("click", () => {
 });
 
 els.sampleBtn.addEventListener("click", () => {
-  loadBenchmarkText(benchmarkSampleCsv, "benchmark_sample.csv");
+  loadBenchmarkText(benchmarkSampleCsv, "data/samples/benchmark_sample.csv");
   loadCsvText(addSyntheticFactorsToCsv(sampleCsv), "示例数据已载入");
 });
 els.exportBtn.addEventListener("click", exportSummaryCsv);
@@ -2292,14 +2292,14 @@ if (window.builtinShanghaiIndexCsv) {
 
 const sampleMode = new URLSearchParams(window.location.search).get("sample");
 if (sampleMode === "quality") {
-  fetch("quality_trend_sample.csv")
+  fetch("data/samples/quality_trend_sample.csv")
     .then((response) => response.text())
-    .then((text) => loadCsvText(text, "quality_trend_sample.csv"))
+    .then((text) => loadCsvText(text, "data/samples/quality_trend_sample.csv"))
     .catch(() => {});
 }
 if (sampleMode === "finance") {
-  fetch("quality_financial_sample.csv")
+  fetch("data/samples/quality_financial_sample.csv")
     .then((response) => response.text())
-    .then((text) => loadQualityText(text, "quality_financial_sample.csv"))
+    .then((text) => loadQualityText(text, "data/samples/quality_financial_sample.csv"))
     .catch(() => {});
 }

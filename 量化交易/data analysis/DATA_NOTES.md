@@ -6,9 +6,25 @@
 
 - Python 构建、训练和验证脚本
 - 前端展示文件：`index.html`、`styles.css`、`app.js`
-- 小型样例 CSV
-- 模型输出摘要、图表和验证结果
-- `pair_pool_data.js`、`quality_model_artifact.js`、`shanghai_index_data.js`
+- `data/frontend/`：前端页面直接加载的内置 JS 数据
+- `data/samples/`：小型 CSV 样例
+- `results/model outputs/`：模型输出摘要、图表和预测结果
+- `results/validation/`：质量信号收益验证结果
+
+## 数据目录结构
+
+```text
+data analysis/
+├── data/
+│   ├── frontend/
+│   └── samples/
+├── results/
+│   ├── model outputs/
+│   └── validation/
+├── index.html
+├── app.js
+└── styles.css
+```
 
 ## 未放入 GitHub 的内容
 
