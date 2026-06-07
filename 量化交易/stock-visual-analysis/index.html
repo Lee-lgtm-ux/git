@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>股市量化可视化工作台</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <h1>股市量化可视化工作台</h1>
+          <p>K 线、均线、布林带、MACD、RSI、KDJ、ADF、ACF/PACF 与成交量分析。</p>
+        </div>
+        <label class="upload">
+          <input id="csvFile" type="file" accept=".csv,text/csv" />
+          导入 CSV
+        </label>
+      </header>
+
+      <section class="mapping-panel">
+        <div class="mapping-title">
+          <h2>CSV 字段映射</h2>
+          <span>每个下拉框请选择对应的 CSV 列名</span>
+        </div>
+        <div class="toolbar">
+          <label>日期列<select id="dateColumn"></select></label>
+          <label>开盘价列<select id="openColumn"></select></label>
+          <label>最高价列<select id="highColumn"></select></label>
+          <label>最低价列<select id="lowColumn"></select></label>
+          <label>收盘价列<select id="closeColumn"></select></label>
+          <label>成交量列<select id="volumeColumn"></select></label>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="control-group">
+          <span>主图指标</span>
+          <label><input type="checkbox" id="showMa" checked /> MA5/10/20/60</label>
+          <label><input type="checkbox" id="showLongMa" checked /> MA120</label>
+          <label><input type="checkbox" id="showBoll" checked /> BOLL</label>
+        </div>
+        <div class="control-group">
+          <span>副图指标</span>
+          <label><input type="checkbox" id="showMacd" checked /> MACD</label>
+          <label><input type="checkbox" id="showRsi" checked /> RSI</label>
+          <label><input type="checkbox" id="showKdj" checked /> KDJ</label>
+          <label><input type="checkbox" id="showAcf" checked /> ACF/PACF</label>
+        </div>
+        <div class="control-group">
+          <span>相关性</span>
+          <label class="range-label">最大滞后 <strong id="acfLagValue">30</strong><input id="acfLag" type="range" min="5" max="80" value="30" /></label>
+        </div>
+        <div class="control-group">
+          <span>ADF</span>
+          <label class="range-label">差分滞后 <strong id="adfLagValue">1</strong><input id="adfLag" type="range" min="0" max="10" value="1" /></label>
+        </div>
+        <div class="control-group">
+          <span>LB</span>
+          <label class="range-label">检验滞后 <strong id="lbLagValue">10</strong><input id="lbLag" type="range" min="1" max="40" value="10" /></label>
+        </div>
+        <div class="control-group compact">
+          <span>显示日期</span>
+          <label>开始<input id="startDate" type="date" /></label>
+          <label>结束<input id="endDate" type="date" /></label>
+          <button id="resetDates" type="button">全部日期</button>
+          <button id="loadSample" type="button">示例数据</button>
+        </div>
+      </section>
+
+      <section class="stats" id="stats"></section>
+      <section class="adf-panel" id="adfResults"></section>
+      <section class="adf-panel" id="lbResults"></section>
+
+      <section class="workspace">
+        <div class="chart-panel">
+          <div class="panel-title">
+            <h2>K 线与主图指标</h2>
+            <span id="rowCount">等待数据</span>
+          </div>
+          <canvas id="klineChart" width="1400" height="620"></canvas>
+          <div class="legend" id="mainLegend"></div>
+        </div>
+
+        <div class="chart-panel">
+          <div class="panel-title">
+            <h2>成交量</h2>
+            <span>Volume + MAVOL5/10</span>
+          </div>
+          <canvas id="volumeChart" width="1400" height="260"></canvas>
+        </div>
+
+        <div class="chart-panel">
+          <div class="panel-title">
+            <h2>累积收益率</h2>
+            <span>以当前区间首日收盘价为基准</span>
+          </div>
+          <canvas id="cumulativeReturnChart" width="1400" height="260"></canvas>
+        </div>
+
+        <div class="indicator-grid">
+          <div class="chart-panel">
+            <div class="panel-title">
+              <h2>MACD</h2>
+              <span>DIF / DEA / Histogram</span>
+            </div>
+            <canvas id="macdChart" width="1400" height="260"></canvas>
+          </div>
+          <div class="chart-panel">
+            <div class="panel-title">
+              <h2>RSI</h2>
+              <span>RSI6 / RSI12 / RSI24</span>
+            </div>
+            <canvas id="rsiChart" width="1400" height="220"></canvas>
+          </div>
+          <div class="chart-panel">
+            <div class="panel-title">
+              <h2>KDJ</h2>
+              <span>K / D / J</span>
+            </div>
+            <canvas id="kdjChart" width="1400" height="220"></canvas>
+          </div>
+          <div class="chart-panel">
+            <div class="panel-title">
+              <h2>ACF 自相关系数</h2>
+              <span>对数收益率，虚线为 95% 置信界</span>
+            </div>
+            <canvas id="acfChart" width="1400" height="260"></canvas>
+          </div>
+          <div class="chart-panel">
+            <div class="panel-title">
+              <h2>PACF 偏自相关系数</h2>
+              <span>Yule-Walker / Levinson-Durbin</span>
+            </div>
+            <canvas id="pacfChart" width="1400" height="260"></canvas>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./src/app.js"></script>
+  </body>
+</html>
