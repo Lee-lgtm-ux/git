@@ -1,0 +1,486 @@
+{
+  "model": "ridge",
+  "target": "future_quality_score_chg",
+  "future_quarters": 4,
+  "metrics": {
+    "model": "ridge",
+    "future_quarters": 4,
+    "target": "future_quality_score_chg",
+    "train_rows": 32756,
+    "test_rows": 14041,
+    "train_start": "2016-03-31",
+    "train_end": "2022-12-31",
+    "test_start": "2023-03-31",
+    "test_end": "2025-03-31",
+    "features": [
+      "quality_value_index_weighted_avg_roe",
+      "quality_value_index_weighted_avg_roe_chg4q",
+      "quality_value_index_weighted_avg_roe_avg4q",
+      "quality_value_index_full_diluted_roe",
+      "quality_value_index_full_diluted_roe_chg4q",
+      "quality_value_index_full_diluted_roe_avg4q",
+      "quality_value_sale_gross_margin",
+      "quality_value_sale_gross_margin_chg4q",
+      "quality_value_sale_gross_margin_avg4q",
+      "quality_value_sale_net_interest_ratio",
+      "quality_value_sale_net_interest_ratio_chg4q",
+      "quality_value_sale_net_interest_ratio_avg4q",
+      "quality_value_index_per_operating_cash_flow_net",
+      "quality_value_index_per_operating_cash_flow_net_chg4q",
+      "quality_value_index_per_operating_cash_flow_net_avg4q",
+      "quality_value_assets_debt_ratio",
+      "quality_value_assets_debt_ratio_chg4q",
+      "quality_value_assets_debt_ratio_avg4q",
+      "quality_value_current_ratio",
+      "quality_value_current_ratio_chg4q",
+      "quality_value_current_ratio_avg4q",
+      "quality_value_quick_ratio",
+      "quality_value_quick_ratio_chg4q",
+      "quality_value_quick_ratio_avg4q",
+      "quality_value_inventory_turnover_ratio",
+      "quality_value_inventory_turnover_ratio_chg4q",
+      "quality_value_inventory_turnover_ratio_avg4q",
+      "quality_value_receive_accounts_turnover_days",
+      "quality_value_receive_accounts_turnover_days_chg4q",
+      "quality_value_receive_accounts_turnover_days_avg4q",
+      "quality_value_calculate_operating_income_total_yoy_growth_ratio",
+      "quality_value_calculate_operating_income_total_yoy_growth_ratio_chg4q",
+      "quality_value_calculate_operating_income_total_yoy_growth_ratio_avg4q",
+      "quality_value_calculate_parent_holder_net_profit_yoy_growth_ratio",
+      "quality_value_calculate_parent_holder_net_profit_yoy_growth_ratio_chg4q",
+      "quality_value_calculate_parent_holder_net_profit_yoy_growth_ratio_avg4q",
+      "quality_value_deduct_net_profit_yoy_growth_ratio",
+      "quality_value_deduct_net_profit_yoy_growth_ratio_chg4q",
+      "quality_value_deduct_net_profit_yoy_growth_ratio_avg4q",
+      "quality_single_yoy_operating_income_total",
+      "quality_single_yoy_operating_income_total_chg4q",
+      "quality_single_yoy_operating_income_total_avg4q",
+      "quality_single_yoy_parent_holder_net_profit",
+      "quality_single_yoy_parent_holder_net_profit_chg4q",
+      "quality_single_yoy_parent_holder_net_profit_avg4q",
+      "quality_yoy_sale_gross_margin",
+      "quality_yoy_sale_gross_margin_chg4q",
+      "quality_yoy_sale_gross_margin_avg4q",
+      "quality_yoy_assets_debt_ratio",
+      "quality_yoy_assets_debt_ratio_chg4q",
+      "quality_yoy_assets_debt_ratio_avg4q",
+      "quality_mom_sale_gross_margin",
+      "quality_mom_sale_gross_margin_chg4q",
+      "quality_mom_sale_gross_margin_avg4q",
+      "quality_mom_index_weighted_avg_roe",
+      "quality_mom_index_weighted_avg_roe_chg4q",
+      "quality_mom_index_weighted_avg_roe_avg4q",
+      "quality_mom_index_per_operating_cash_flow_net",
+      "quality_mom_index_per_operating_cash_flow_net_chg4q",
+      "quality_mom_index_per_operating_cash_flow_net_avg4q",
+      "quality_score",
+      "quality_score_chg4q",
+      "quality_score_avg4q"
+    ],
+    "train_r2": 0.3851206011345425,
+    "test_r2": 0.3223027131394365,
+    "train_rmse": 15.446952225680773,
+    "test_rmse": 15.436361096790403,
+    "test_rank_ic_mean": 0.5330475884777575,
+    "test_rank_ic_positive_rate": 1.0,
+    "top_minus_bottom_future_quality_change": 30.601290892214134
+  },
+  "features": [
+    "quality_value_index_weighted_avg_roe",
+    "quality_value_index_weighted_avg_roe_chg4q",
+    "quality_value_index_weighted_avg_roe_avg4q",
+    "quality_value_index_full_diluted_roe",
+    "quality_value_index_full_diluted_roe_chg4q",
+    "quality_value_index_full_diluted_roe_avg4q",
+    "quality_value_sale_gross_margin",
+    "quality_value_sale_gross_margin_chg4q",
+    "quality_value_sale_gross_margin_avg4q",
+    "quality_value_sale_net_interest_ratio",
+    "quality_value_sale_net_interest_ratio_chg4q",
+    "quality_value_sale_net_interest_ratio_avg4q",
+    "quality_value_index_per_operating_cash_flow_net",
+    "quality_value_index_per_operating_cash_flow_net_chg4q",
+    "quality_value_index_per_operating_cash_flow_net_avg4q",
+    "quality_value_assets_debt_ratio",
+    "quality_value_assets_debt_ratio_chg4q",
+    "quality_value_assets_debt_ratio_avg4q",
+    "quality_value_current_ratio",
+    "quality_value_current_ratio_chg4q",
+    "quality_value_current_ratio_avg4q",
+    "quality_value_quick_ratio",
+    "quality_value_quick_ratio_chg4q",
+    "quality_value_quick_ratio_avg4q",
+    "quality_value_inventory_turnover_ratio",
+    "quality_value_inventory_turnover_ratio_chg4q",
+    "quality_value_inventory_turnover_ratio_avg4q",
+    "quality_value_receive_accounts_turnover_days",
+    "quality_value_receive_accounts_turnover_days_chg4q",
+    "quality_value_receive_accounts_turnover_days_avg4q",
+    "quality_value_calculate_operating_income_total_yoy_growth_ratio",
+    "quality_value_calculate_operating_income_total_yoy_growth_ratio_chg4q",
+    "quality_value_calculate_operating_income_total_yoy_growth_ratio_avg4q",
+    "quality_value_calculate_parent_holder_net_profit_yoy_growth_ratio",
+    "quality_value_calculate_parent_holder_net_profit_yoy_growth_ratio_chg4q",
+    "quality_value_calculate_parent_holder_net_profit_yoy_growth_ratio_avg4q",
+    "quality_value_deduct_net_profit_yoy_growth_ratio",
+    "quality_value_deduct_net_profit_yoy_growth_ratio_chg4q",
+    "quality_value_deduct_net_profit_yoy_growth_ratio_avg4q",
+    "quality_single_yoy_operating_income_total",
+    "quality_single_yoy_operating_income_total_chg4q",
+    "quality_single_yoy_operating_income_total_avg4q",
+    "quality_single_yoy_parent_holder_net_profit",
+    "quality_single_yoy_parent_holder_net_profit_chg4q",
+    "quality_single_yoy_parent_holder_net_profit_avg4q",
+    "quality_yoy_sale_gross_margin",
+    "quality_yoy_sale_gross_margin_chg4q",
+    "quality_yoy_sale_gross_margin_avg4q",
+    "quality_yoy_assets_debt_ratio",
+    "quality_yoy_assets_debt_ratio_chg4q",
+    "quality_yoy_assets_debt_ratio_avg4q",
+    "quality_mom_sale_gross_margin",
+    "quality_mom_sale_gross_margin_chg4q",
+    "quality_mom_sale_gross_margin_avg4q",
+    "quality_mom_index_weighted_avg_roe",
+    "quality_mom_index_weighted_avg_roe_chg4q",
+    "quality_mom_index_weighted_avg_roe_avg4q",
+    "quality_mom_index_per_operating_cash_flow_net",
+    "quality_mom_index_per_operating_cash_flow_net_chg4q",
+    "quality_mom_index_per_operating_cash_flow_net_avg4q",
+    "quality_score",
+    "quality_score_chg4q",
+    "quality_score_avg4q"
+  ],
+  "featureStats": {
+    "quality_value_index_weighted_avg_roe": {
+      "mean": 5.9423763852383695,
+      "std": 10.606373467269714
+    },
+    "quality_value_index_weighted_avg_roe_chg4q": {
+      "mean": -0.2418884565249909,
+      "std": 11.902737327384369
+    },
+    "quality_value_index_weighted_avg_roe_avg4q": {
+      "mean": 6.057419253370942,
+      "std": 7.822019297802061
+    },
+    "quality_value_index_full_diluted_roe": {
+      "mean": 5.0084017394277405,
+      "std": 36.942961127643315
+    },
+    "quality_value_index_full_diluted_roe_chg4q": {
+      "mean": -0.22376074321003486,
+      "std": 60.61651924219904
+    },
+    "quality_value_index_full_diluted_roe_avg4q": {
+      "mean": 5.218641817495423,
+      "std": 20.460535086303118
+    },
+    "quality_value_sale_gross_margin": {
+      "mean": 30.313070378443065,
+      "std": 20.088353333153638
+    },
+    "quality_value_sale_gross_margin_chg4q": {
+      "mean": -0.3337341923627583,
+      "std": 8.911617289372069
+    },
+    "quality_value_sale_gross_margin_avg4q": {
+      "mean": 30.437981252537558,
+      "std": 19.680676441687805
+    },
+    "quality_value_sale_net_interest_ratio": {
+      "mean": 11.164606504690472,
+      "std": 49.75443263372938
+    },
+    "quality_value_sale_net_interest_ratio_chg4q": {
+      "mean": 56.730257894736845,
+      "std": 11959.30264203153
+    },
+    "quality_value_sale_net_interest_ratio_avg4q": {
+      "mean": -4.321514628608669,
+      "std": 3312.9950305225725
+    },
+    "quality_value_index_per_operating_cash_flow_net": {
+      "mean": 0.42506437805842257,
+      "std": 1.55470686423802
+    },
+    "quality_value_index_per_operating_cash_flow_net_chg4q": {
+      "mean": 0.031813746607688535,
+      "std": 1.287080990076874
+    },
+    "quality_value_index_per_operating_cash_flow_net_avg4q": {
+      "mean": 0.4142437410517768,
+      "std": 1.2279846668361922
+    },
+    "quality_value_assets_debt_ratio": {
+      "mean": 43.58633383977605,
+      "std": 19.41817454402665
+    },
+    "quality_value_assets_debt_ratio_chg4q": {
+      "mean": 0.49034677222898904,
+      "std": 7.229250865775836
+    },
+    "quality_value_assets_debt_ratio_avg4q": {
+      "mean": 43.40135680884102,
+      "std": 19.286875131973883
+    },
+    "quality_value_current_ratio": {
+      "mean": 2.381700406008932,
+      "std": 3.0476928682843396
+    },
+    "quality_value_current_ratio_chg4q": {
+      "mean": -0.1577892941855247,
+      "std": 8.899855728315988
+    },
+    "quality_value_current_ratio_avg4q": {
+      "mean": 2.4387416607902215,
+      "std": 4.0551610863901475
+    },
+    "quality_value_quick_ratio": {
+      "mean": 1.68975456118982,
+      "std": 2.3364415245708807
+    },
+    "quality_value_quick_ratio_chg4q": {
+      "mean": -0.08242311900335493,
+      "std": 3.5340856149023363
+    },
+    "quality_value_quick_ratio_avg4q": {
+      "mean": 1.719313948009488,
+      "std": 2.491872193095785
+    },
+    "quality_value_inventory_turnover_ratio": {
+      "mean": 112.10560691283631,
+      "std": 5624.202811195051
+    },
+    "quality_value_inventory_turnover_ratio_chg4q": {
+      "mean": -59.70005538602899,
+      "std": 9834.295345405002
+    },
+    "quality_value_inventory_turnover_ratio_avg4q": {
+      "mean": 119.4800888851493,
+      "std": 5030.984001569976
+    },
+    "quality_value_receive_accounts_turnover_days": {
+      "mean": 89.0590608863816,
+      "std": 117.03782988655894
+    },
+    "quality_value_receive_accounts_turnover_days_chg4q": {
+      "mean": 1.3235688826206808,
+      "std": 83.94231049531172
+    },
+    "quality_value_receive_accounts_turnover_days_avg4q": {
+      "mean": 88.56701843227128,
+      "std": 106.50674112210308
+    },
+    "quality_value_calculate_operating_income_total_yoy_growth_ratio": {
+      "mean": 36.9173505712332,
+      "std": 1551.173244267161
+    },
+    "quality_value_calculate_operating_income_total_yoy_growth_ratio_chg4q": {
+      "mean": -6.054666887471418,
+      "std": 1834.5268664431626
+    },
+    "quality_value_calculate_operating_income_total_yoy_growth_ratio_avg4q": {
+      "mean": 37.688324888881766,
+      "std": 702.5581557054893
+    },
+    "quality_value_calculate_parent_holder_net_profit_yoy_growth_ratio": {
+      "mean": 94.22653433732933,
+      "std": 3780.902839694743
+    },
+    "quality_value_calculate_parent_holder_net_profit_yoy_growth_ratio_chg4q": {
+      "mean": 12.076421817466926,
+      "std": 5145.598484794858
+    },
+    "quality_value_calculate_parent_holder_net_profit_yoy_growth_ratio_avg4q": {
+      "mean": 84.97424298333584,
+      "std": 1854.7462219704291
+    },
+    "quality_value_deduct_net_profit_yoy_growth_ratio": {
+      "mean": -354.38787445135387,
+      "std": 106964.43897131943
+    },
+    "quality_value_deduct_net_profit_yoy_growth_ratio_chg4q": {
+      "mean": 8.001371575101194,
+      "std": 151281.1257511169
+    },
+    "quality_value_deduct_net_profit_yoy_growth_ratio_avg4q": {
+      "mean": -357.6624923711279,
+      "std": 53529.5578076318
+    },
+    "quality_single_yoy_operating_income_total": {
+      "mean": 0.3959603473812423,
+      "std": 15.090732148648048
+    },
+    "quality_single_yoy_operating_income_total_chg4q": {
+      "mean": -0.4405795781887728,
+      "std": 63.872848718298016
+    },
+    "quality_single_yoy_operating_income_total_avg4q": {
+      "mean": 0.5439041619187127,
+      "std": 18.785563154854707
+    },
+    "quality_single_yoy_parent_holder_net_profit": {
+      "mean": 1.6766218977192986,
+      "std": 136.4657644831016
+    },
+    "quality_single_yoy_parent_holder_net_profit_chg4q": {
+      "mean": -0.40300946743145927,
+      "std": 230.31849178654596
+    },
+    "quality_single_yoy_parent_holder_net_profit_avg4q": {
+      "mean": 1.8277209095663183,
+      "std": 81.88697113461119
+    },
+    "quality_yoy_sale_gross_margin": {
+      "mean": 0.20450241638694788,
+      "std": 20.26744077881126
+    },
+    "quality_yoy_sale_gross_margin_chg4q": {
+      "mean": 0.01060276827488944,
+      "std": 28.621746871147124
+    },
+    "quality_yoy_sale_gross_margin_avg4q": {
+      "mean": 0.19663900192006611,
+      "std": 10.162384348349002
+    },
+    "quality_yoy_assets_debt_ratio": {
+      "mean": 0.04985064764728508,
+      "std": 0.33797634220577066
+    },
+    "quality_yoy_assets_debt_ratio_chg4q": {
+      "mean": 0.0038263199181571457,
+      "std": 0.5471532889579679
+    },
+    "quality_yoy_assets_debt_ratio_avg4q": {
+      "mean": 0.05036669753630931,
+      "std": 0.2938431673310294
+    },
+    "quality_mom_sale_gross_margin": {
+      "mean": 0.04559296984678506,
+      "std": 17.064412527972905
+    },
+    "quality_mom_sale_gross_margin_chg4q": {
+      "mean": 0.007509114347500958,
+      "std": 23.525821364759942
+    },
+    "quality_mom_sale_gross_margin_avg4q": {
+      "mean": 0.02465770651906105,
+      "std": 8.483308240586648
+    },
+    "quality_mom_index_weighted_avg_roe": {
+      "mean": 0.38121697875974964,
+      "std": 61.19153625993024
+    },
+    "quality_mom_index_weighted_avg_roe_chg4q": {
+      "mean": -0.13770922877299827,
+      "std": 87.22338945059069
+    },
+    "quality_mom_index_weighted_avg_roe_avg4q": {
+      "mean": 0.37872975249138113,
+      "std": 29.85463071414204
+    },
+    "quality_mom_index_per_operating_cash_flow_net": {
+      "mean": 2.848054590170524,
+      "std": 61.57112950866243
+    },
+    "quality_mom_index_per_operating_cash_flow_net_chg4q": {
+      "mean": 0.19865293076436524,
+      "std": 77.18681012924228
+    },
+    "quality_mom_index_per_operating_cash_flow_net_avg4q": {
+      "mean": 2.9485164980903864,
+      "std": 32.99999705363548
+    },
+    "quality_score": {
+      "mean": 49.30136495910208,
+      "std": 17.208902209380437
+    },
+    "quality_score_chg4q": {
+      "mean": -0.16032958498715444,
+      "std": 19.53668275716625
+    },
+    "quality_score_avg4q": {
+      "mean": 49.336369685476555,
+      "std": 15.080918809966121
+    }
+  },
+  "intercept": -0.9018201940375792,
+  "coefficients": {
+    "quality_value_index_weighted_avg_roe": -0.677885932728207,
+    "quality_value_index_weighted_avg_roe_chg4q": -1.341917107980681,
+    "quality_value_index_weighted_avg_roe_avg4q": 1.9690098773631186,
+    "quality_value_index_full_diluted_roe": -0.2010329497816278,
+    "quality_value_index_full_diluted_roe_chg4q": 0.5794775350042095,
+    "quality_value_index_full_diluted_roe_avg4q": -0.472837434067599,
+    "quality_value_sale_gross_margin": 4.125629923655916,
+    "quality_value_sale_gross_margin_chg4q": -0.47828921256913454,
+    "quality_value_sale_gross_margin_avg4q": -0.9386613929886573,
+    "quality_value_sale_net_interest_ratio": -2.826311107162564,
+    "quality_value_sale_net_interest_ratio_chg4q": -0.8448904308900874,
+    "quality_value_sale_net_interest_ratio_avg4q": 3.805053546142981,
+    "quality_value_index_per_operating_cash_flow_net": 2.4824807107791904,
+    "quality_value_index_per_operating_cash_flow_net_chg4q": -0.6876344325123385,
+    "quality_value_index_per_operating_cash_flow_net_avg4q": 0.45942683213160757,
+    "quality_value_assets_debt_ratio": -0.07114040056186635,
+    "quality_value_assets_debt_ratio_chg4q": 0.7183473431628309,
+    "quality_value_assets_debt_ratio_avg4q": -2.113735706099247,
+    "quality_value_current_ratio": 0.39502901917113215,
+    "quality_value_current_ratio_chg4q": -0.8253430015104439,
+    "quality_value_current_ratio_avg4q": 1.4590586561912433,
+    "quality_value_quick_ratio": -0.5212427410894249,
+    "quality_value_quick_ratio_chg4q": 0.6283409958113064,
+    "quality_value_quick_ratio_avg4q": -1.19273084815801,
+    "quality_value_inventory_turnover_ratio": -1.5259724944785877,
+    "quality_value_inventory_turnover_ratio_chg4q": 0.20238246287221404,
+    "quality_value_inventory_turnover_ratio_avg4q": 1.1050195252373582,
+    "quality_value_receive_accounts_turnover_days": -0.7617369241376253,
+    "quality_value_receive_accounts_turnover_days_chg4q": 0.401044418088008,
+    "quality_value_receive_accounts_turnover_days_avg4q": -0.6592390275340191,
+    "quality_value_calculate_operating_income_total_yoy_growth_ratio": -5.751972216102537,
+    "quality_value_calculate_operating_income_total_yoy_growth_ratio_chg4q": 2.633710102682222,
+    "quality_value_calculate_operating_income_total_yoy_growth_ratio_avg4q": 0.9216606717312582,
+    "quality_value_calculate_parent_holder_net_profit_yoy_growth_ratio": -0.3600364402223152,
+    "quality_value_calculate_parent_holder_net_profit_yoy_growth_ratio_chg4q": 0.42505422657647685,
+    "quality_value_calculate_parent_holder_net_profit_yoy_growth_ratio_avg4q": -1.6600973931112892,
+    "quality_value_deduct_net_profit_yoy_growth_ratio": -0.46901008296196117,
+    "quality_value_deduct_net_profit_yoy_growth_ratio_chg4q": 1.0406131986067364,
+    "quality_value_deduct_net_profit_yoy_growth_ratio_avg4q": -0.1360147210610511,
+    "quality_single_yoy_operating_income_total": 1.6998750802394087,
+    "quality_single_yoy_operating_income_total_chg4q": -1.2005557787402643,
+    "quality_single_yoy_operating_income_total_avg4q": 2.0015207914320063,
+    "quality_single_yoy_parent_holder_net_profit": -0.34693554480362077,
+    "quality_single_yoy_parent_holder_net_profit_chg4q": 0.25072365700296556,
+    "quality_single_yoy_parent_holder_net_profit_avg4q": 0.4996903311268008,
+    "quality_yoy_sale_gross_margin": 0.008249195214082891,
+    "quality_yoy_sale_gross_margin_chg4q": 0.39620346935804257,
+    "quality_yoy_sale_gross_margin_avg4q": -1.3740351179642627,
+    "quality_yoy_assets_debt_ratio": 0.3354479141413381,
+    "quality_yoy_assets_debt_ratio_chg4q": -0.6185205997044878,
+    "quality_yoy_assets_debt_ratio_avg4q": -0.22359577382371543,
+    "quality_mom_sale_gross_margin": 0.23843024201089816,
+    "quality_mom_sale_gross_margin_chg4q": -0.11031856936723697,
+    "quality_mom_sale_gross_margin_avg4q": 0.18022401390207152,
+    "quality_mom_index_weighted_avg_roe": -0.611349915691068,
+    "quality_mom_index_weighted_avg_roe_chg4q": 0.20691683517926698,
+    "quality_mom_index_weighted_avg_roe_avg4q": -0.3659346994496646,
+    "quality_mom_index_per_operating_cash_flow_net": -0.01064686396555778,
+    "quality_mom_index_per_operating_cash_flow_net_chg4q": -0.06501098005153641,
+    "quality_mom_index_per_operating_cash_flow_net_avg4q": -0.42373129278943045,
+    "quality_score": -12.700304998985253,
+    "quality_score_chg4q": -0.44963830155563606,
+    "quality_score_avg4q": -0.5521412000483306
+  },
+  "scoreSpecs": {
+    "quality_value_index_weighted_avg_roe": 1,
+    "quality_value_index_full_diluted_roe": 1,
+    "quality_value_sale_gross_margin": 1,
+    "quality_value_sale_net_interest_ratio": 1,
+    "quality_value_index_per_operating_cash_flow_net": 1,
+    "quality_value_calculate_operating_income_total_yoy_growth_ratio": 1,
+    "quality_value_calculate_parent_holder_net_profit_yoy_growth_ratio": 1,
+    "quality_value_deduct_net_profit_yoy_growth_ratio": 1,
+    "quality_single_yoy_operating_income_total": 1,
+    "quality_single_yoy_parent_holder_net_profit": 1,
+    "quality_value_assets_debt_ratio": -1
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "horizon": 250,
+    "samples": 12390,
+    "periods": 8,
+    "rank_ic_mean": 0.008094862318013651,
+    "rank_ic_positive_rate": 0.375,
+    "top_group_return": 0.250010132012161,
+    "bottom_group_return": 0.26440336799420205,
+    "top_minus_bottom": -0.014393235982041064
+  },
+  {
+    "horizon": 500,
+    "samples": 4494,
+    "periods": 3,
+    "rank_ic_mean": 0.07636094697641449,
+    "rank_ic_positive_rate": 1.0,
+    "top_group_return": 0.42212550499492707,
+    "bottom_group_return": 0.27958385986945355,
+    "top_minus_bottom": 0.14254164512547352
+  }
+]
