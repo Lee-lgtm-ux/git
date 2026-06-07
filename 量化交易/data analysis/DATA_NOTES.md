@@ -6,6 +6,7 @@
 
 - Python 构建、训练和验证脚本
 - 前端展示文件：`index.html`、`styles.css`、`app.js`
+- `scripts/`：按功能归档的 Python 脚本
 - `data/frontend/`：前端页面直接加载的内置 JS 数据
 - `data/samples/`：小型 CSV 样例
 - `results/model outputs/`：模型输出摘要、图表和预测结果
@@ -15,6 +16,11 @@
 
 ```text
 data analysis/
+├── scripts/
+│   ├── data builders/
+│   ├── models/
+│   ├── validation/
+│   └── strategies/
 ├── data/
 │   ├── frontend/
 │   └── samples/

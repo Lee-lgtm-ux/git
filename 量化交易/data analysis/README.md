@@ -106,12 +106,12 @@ Alpha/Beta 功能默认使用内置上证指数。对照窗口如果上传了自
 
 时间窗口为近 10 年：`2016-01-01` 至 `2026-05-22`。当前生成结果为 `1,804` 只股票、`3,755,869` 行日线记录。
 
-`build_representative_dataset.py` 用来重新生成这个正式数据库；`build_quality_dataset.py` 则提供底层合并日线和拉取财务质量因子的函数。
+`scripts/data builders/build_representative_dataset.py` 用来重新生成这个正式数据库；`scripts/data builders/build_quality_dataset.py` 则提供底层合并日线和拉取财务质量因子的函数。
 
 重新生成正式代表性日线数据库：
 
 ```bash
-python3 build_representative_dataset.py \
+python3 "scripts/data builders/build_representative_dataset.py" \
   --skip-quality \
   --force
 ```
@@ -133,7 +133,7 @@ python3 build_representative_dataset.py \
 如果后续要重新补充公司质量因子，可以运行：
 
 ```bash
-python3 build_akshare_quality_dataset.py \
+python3 "scripts/data builders/build_akshare_quality_dataset.py" \
   --force
 ```
 
@@ -154,7 +154,7 @@ python3 build_akshare_quality_dataset.py \
 训练命令：
 
 ```bash
-python3 train_quality_trend_model.py \
+python3 "scripts/models/train_quality_trend_model.py" \
   --output-dir "results/model outputs/model_outputs_quality_trend_change_hgb_v1" \
   --model hgb \
   --target future_change \
@@ -241,7 +241,7 @@ http://127.0.0.1:8001/index.html?sample=finance
 先做一个小样本验证：
 
 ```bash
-python3 build_quality_dataset.py \
+python3 "scripts/data builders/build_quality_dataset.py" \
   --start-year 2023 \
   --end-year 2023 \
   --codes sh600519 sz300750 sh600989 \
@@ -263,7 +263,7 @@ python3 build_quality_dataset.py \
 如需对自定义股票池分阶段拉财务因子，例如先跑近几年：
 
 ```bash
-python3 build_quality_dataset.py \
+python3 "scripts/data builders/build_quality_dataset.py" \
   --start-year 2018 \
   --end-year 2026 \
   --output-dir quality_dataset \
@@ -274,7 +274,7 @@ python3 build_quality_dataset.py \
 如果只想先把你本地已有的全部股票日线合并成一个面板，不联网拉财务数据：
 
 ```bash
-python3 build_quality_dataset.py \
+python3 "scripts/data builders/build_quality_dataset.py" \
   --output-dir quality_dataset \
   --daily-market \
   --skip-quality \
