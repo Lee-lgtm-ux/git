@@ -24,6 +24,25 @@ trading-data.20260522/
 └── readme.txt
 ```
 
+## GitHub 中的样例数据
+
+为了方便查看数据格式，本目录保留了一小部分样例数据：
+
+```text
+sample data/
+├── index data/
+│   ├── sh000001.csv
+│   ├── sh000300.csv
+│   └── sz399001.csv
+├── stock data/
+│   ├── sh600000.csv
+│   ├── sh600519.csv
+│   ├── sz000001.csv
+│   ├── sz000333.csv
+│   └── sz300750.csv
+└── 原始数据readme.txt
+```
+
 ## GitHub 存放策略
 
 这个数据集不直接放入普通 GitHub 仓库，原因是数据体积过大，会导致 push、clone、pull 都很慢，也可能触发 GitHub 的文件大小限制。
