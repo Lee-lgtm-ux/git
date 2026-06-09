@@ -141,6 +141,62 @@ python3 "scripts/models/train_quality_trend_model.py" \
   --test-start 2023-01-01
 ```
 
+### 当前训练效果
+
+这里展示的是已经保存到仓库里的财务质量趋势模型结果。这个任务不是神经网络训练，所以没有传统意义上每个 epoch 的 loss 曲线；更适合看下面这些评估图：
+
+- 预测值和真实值是否大致同向
+- 每个季度的 Rank IC 是否稳定为正
+- 按预测分组后，高分组是否真的有更好的未来质量改善
+
+#### 指标对比
+
+| 模型 | 训练样本 | 测试样本 | 训练区间 | 测试区间 | 训练 R² | 测试 R² | 测试 RMSE | 测试 Rank IC 均值 | Rank IC 为正比例 | 最高组 - 最低组未来质量改善 |
+| --- | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| HGB | 32,756 | 14,041 | 2016-03-31 至 2022-12-31 | 2023-03-31 至 2025-03-31 | 0.526 | 0.311 | 15.566 | 0.542 | 100% | 31.38 |
+| Ridge | 32,756 | 14,041 | 2016-03-31 至 2022-12-31 | 2023-03-31 至 2025-03-31 | 0.385 | 0.322 | 15.436 | 0.533 | 100% | 30.60 |
+
+怎么读这些指标：
+
+- `测试 R²`：模型在样本外解释未来质量变化的能力，越高越好。
+- `测试 RMSE`：预测误差，越低越好。
+- `Rank IC`：更适合选股排序任务，表示预测排名和真实未来改善排名是否一致，越高越好。
+- `最高组 - 最低组未来质量改善`：如果把股票按预测分数分组，高分组比低分组未来质量改善多多少。
+
+#### HGB 模型图
+
+预测值和真实值散点图：
+
+![HGB prediction vs actual](../../results/model%20outputs/model_outputs_quality_trend_change_hgb_v1/prediction_vs_actual_quality.png)
+
+Rank IC 时间序列：
+
+![HGB rank IC timeseries](../../results/model%20outputs/model_outputs_quality_trend_change_hgb_v1/rank_ic_timeseries.png)
+
+按预测分组后的未来质量改善：
+
+![HGB group future quality change](../../results/model%20outputs/model_outputs_quality_trend_change_hgb_v1/group_future_quality_change.png)
+
+#### Ridge 模型图
+
+预测值和真实值散点图：
+
+![Ridge prediction vs actual](../../results/model%20outputs/model_outputs_quality_trend_change_ridge_v1/prediction_vs_actual_quality.png)
+
+Rank IC 时间序列：
+
+![Ridge rank IC timeseries](../../results/model%20outputs/model_outputs_quality_trend_change_ridge_v1/rank_ic_timeseries.png)
+
+按预测分组后的未来质量改善：
+
+![Ridge group future quality change](../../results/model%20outputs/model_outputs_quality_trend_change_ridge_v1/group_future_quality_change.png)
+
+#### 结论
+
+HGB 和 Ridge 在测试集上的表现接近。Ridge 的测试 R² 和 RMSE 略好，HGB 的 Rank IC 和分组质量改善略好。
+
+如果目标是“解释模型为什么这样判断”，Ridge 更容易解释；如果目标是“做基本面改善排序”，HGB 略占优势。
+
 ## train_market_model.py
 
 这个脚本训练的是“市场收益预测模型”。
