@@ -1,0 +1,69 @@
+{
+  "model": "hgb",
+  "features": [
+    "ret_1d",
+    "ret_2d",
+    "ret_3d",
+    "ret_5d",
+    "ret_10d",
+    "ret_20d",
+    "intraday_range",
+    "close_position",
+    "gap_open",
+    "vol_5d",
+    "vol_20d",
+    "vol_ratio_5_20",
+    "ma_gap_5d",
+    "ma_gap_10d",
+    "ma_gap_20d",
+    "ma_gap_60d",
+    "money_chg_5d",
+    "volume_chg_5d",
+    "turnover",
+    "turnover_5d_mean",
+    "turnover_20d_mean",
+    "turnover_chg_5_20",
+    "log_money",
+    "log_market_value",
+    "market_ret_1d",
+    "market_ret_5d",
+    "market_ret_20d",
+    "rel_ret_5d",
+    "rel_ret_20d"
+  ],
+  "horizons": [
+    1,
+    3,
+    5
+  ],
+  "train_rows": 24184,
+  "test_rows": 33211,
+  "train_start": "2021-12-24",
+  "train_end": "2023-12-29",
+  "test_start": "2024-01-02",
+  "test_end": "2025-09-23",
+  "latest_data_date": "2025-09-30",
+  "per_horizon": {
+    "1d": {
+      "test_r2": -0.0003659842641172695,
+      "test_rmse": 0.04191079851191144,
+      "direction_accuracy": 0.4753545512029147,
+      "up_auc": 0.5170198140500231
+    },
+    "3d": {
+      "test_r2": -0.0018120374001648898,
+      "test_rmse": 0.06072465176298088,
+      "direction_accuracy": 0.46216614976965464,
+      "up_auc": 0.5013454327262518
+    },
+    "5d": {
+      "test_r2": 0.0031626814910689083,
+      "test_rmse": 0.06948199721135158,
+      "direction_accuracy": 0.46644184155851975,
+      "up_auc": 0.5086266503247425
+    }
+  },
+  "test_rank_ic_5d_mean": 0.159675653090364,
+  "test_rank_ic_5d_positive_rate": 0.8293269230769231,
+  "group_5_minus_1_return_5d": 0.022038675011375734
+}
