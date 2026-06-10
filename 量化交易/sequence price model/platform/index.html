@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>股价序列模型预测平台</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="mark">S</div>
+          <div>
+            <h1>序列预测平台</h1>
+            <p>上传单只股票日线 CSV，使用 TCN 与 Transformer 同时预测。</p>
+          </div>
+        </div>
+
+        <label class="file-box" for="stockFile">
+          <input id="stockFile" type="file" accept=".csv,text/csv" />
+          <span>选择股票 CSV</span>
+          <small id="fileName">需要 code/date/open/high/low/close/volume/money/turnover/adjust_price_f</small>
+        </label>
+
+        <button id="predictBtn" type="button" disabled>开始预测</button>
+        <p class="note">模型只输出走势概率和预期收益，不给买卖建议。</p>
+      </aside>
+
+      <section class="content">
+        <header>
+          <p class="eyebrow">Sequence Price Model</p>
+          <h2 id="title">等待上传股票数据</h2>
+        </header>
+
+        <section class="meta-grid" id="metaGrid"></section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <h3>模型预测结果</h3>
+              <p id="subtitle">上传 CSV 后显示 TCN 与 Transformer 的 1/3/5 日预测。</p>
+            </div>
+          </div>
+          <div id="results" class="results"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <h3>模型测试集表现</h3>
+              <p>来自训练时的 out-of-sample 评估。</p>
+            </div>
+          </div>
+          <div id="metrics" class="metrics"></div>
+        </section>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

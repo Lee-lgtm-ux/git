@@ -1,0 +1,88 @@
+{
+  "model": "sequence_ridge",
+  "lookback": 30,
+  "features": [
+    "ret_1d",
+    "ret_2d",
+    "ret_3d",
+    "ret_5d",
+    "range_pct",
+    "close_position",
+    "gap_open",
+    "turnover",
+    "turnover_chg_5d",
+    "money_chg_5d",
+    "log_money",
+    "vol_5d",
+    "vol_20d",
+    "ma_gap_5d",
+    "ma_gap_20d",
+    "market_ret_1d",
+    "market_ret_5d",
+    "rel_ret_5d"
+  ],
+  "train_rows": 2475,
+  "test_rows": 3925,
+  "train_start": "2021-12-24",
+  "train_end": "2023-12-29",
+  "test_start": "2024-01-02",
+  "test_end": "2025-09-23",
+  "train": {
+    "rows": 2475,
+    "per_horizon": {
+      "1d": {
+        "direction_accuracy": 0.4484848484848485,
+        "return_mae": 0.01737624331840193,
+        "rank_ic": 0.3329853530986408,
+        "auc": 0.7729808042966548,
+        "mean_pred_return": 0.0020765437761217716,
+        "mean_actual_return": 0.0020765437761217707
+      },
+      "3d": {
+        "direction_accuracy": 0.46101010101010104,
+        "return_mae": 0.029836282230771546,
+        "rank_ic": 0.39547579065301003,
+        "auc": 0.7782890394233657,
+        "mean_pred_return": 0.0047708216953819,
+        "mean_actual_return": 0.004770821695381892
+      },
+      "5d": {
+        "direction_accuracy": 0.45535353535353534,
+        "return_mae": 0.0365522469401251,
+        "rank_ic": 0.43574776780996477,
+        "auc": 0.781358964856281,
+        "mean_pred_return": 0.00442777411117443,
+        "mean_actual_return": 0.004427774111174438
+      }
+    }
+  },
+  "test": {
+    "rows": 3925,
+    "per_horizon": {
+      "1d": {
+        "direction_accuracy": 0.4682802547770701,
+        "return_mae": 0.034200462515689894,
+        "rank_ic": 0.0032507022306336583,
+        "auc": 0.4848428879852326,
+        "mean_pred_return": 0.0014822099977338512,
+        "mean_actual_return": -2.003620570044168e-05
+      },
+      "3d": {
+        "direction_accuracy": 0.46471337579617833,
+        "return_mae": 0.05425694797278213,
+        "rank_ic": 0.062471883568042404,
+        "auc": 0.5279376733681397,
+        "mean_pred_return": 0.003491181167596169,
+        "mean_actual_return": 0.0013112929719007334
+      },
+      "5d": {
+        "direction_accuracy": 0.47286624203821653,
+        "return_mae": 0.06566065835120993,
+        "rank_ic": 0.07897917445236295,
+        "auc": 0.5316344271453587,
+        "mean_pred_return": 0.003141217729335129,
+        "mean_actual_return": 0.0021013696816541676
+      }
+    }
+  }
+}

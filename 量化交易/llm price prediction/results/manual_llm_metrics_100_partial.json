@@ -1,0 +1,32 @@
+{
+  "samples": 100,
+  "predictions": 78,
+  "matched_valid_predictions": 76,
+  "parse_failures": 0,
+  "per_horizon": {
+    "1d": {
+      "direction_accuracy": 0.5,
+      "return_mae": 0.02024754160167038,
+      "rank_ic": 0.10387800584463634,
+      "auc": 0.5651567944250872,
+      "mean_pred_return": 0.0006447368421052633,
+      "mean_actual_return": -0.00043391910830197454
+    },
+    "3d": {
+      "direction_accuracy": 0.3157894736842105,
+      "return_mae": 0.052896215546937186,
+      "rank_ic": 0.10884710647018088,
+      "auc": 0.4451345755693582,
+      "mean_pred_return": -0.00039473684210526304,
+      "mean_actual_return": -0.04361607531090424
+    },
+    "5d": {
+      "direction_accuracy": 0.6447368421052632,
+      "return_mae": 0.0950636820528118,
+      "rank_ic": 0.6412511222523958,
+      "auc": 0.7289617486338797,
+      "mean_pred_return": -0.003118421052631579,
+      "mean_actual_return": -0.07796610641197994
+    }
+  }
+}

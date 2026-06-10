@@ -1,0 +1,1016 @@
+[
+{
+"sample_id": "bj430017_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.46,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.0,
+"pred_return_5d": -0.005,
+"confidence": 0.56,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj430017_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.49,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.51,
+"pred_return_1d": 0.0,
+"pred_return_3d": 0.0,
+"pred_return_5d": 0.001,
+"confidence": 0.4,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj430047_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.53,
+"prob_up_3d": 0.53,
+"prob_up_5d": 0.47,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.002,
+"pred_return_5d": -0.002,
+"confidence": 0.51,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj430047_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.58,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.51,
+"pred_return_1d": 0.003,
+"pred_return_3d": 0.0,
+"pred_return_5d": 0.0,
+"confidence": 0.57,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj430090_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.52,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.44,
+"pred_return_1d": 0.002,
+"pred_return_3d": 0.0,
+"pred_return_5d": -0.01,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj430090_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.53,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.001,
+"confidence": 0.48,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj430139_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.46,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.001,
+"pred_return_5d": -0.004,
+"confidence": 0.52,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj430139_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.52,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.51,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.001,
+"confidence": 0.41,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj430198_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.43,
+"pred_return_1d": 0.0,
+"pred_return_3d": 0.0,
+"pred_return_5d": -0.021,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj430198_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.52,
+"prob_up_5d": 0.51,
+"pred_return_1d": 0.0,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.001,
+"confidence": 0.4,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj430300_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.46,
+"prob_up_5d": 0.45,
+"pred_return_1d": 0.0,
+"pred_return_3d": -0.006,
+"pred_return_5d": -0.011,
+"confidence": 0.58,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj430300_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.51,
+"pred_return_1d": 0.0,
+"pred_return_3d": 0.0,
+"pred_return_5d": 0.001,
+"confidence": 0.39,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj430418_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.49,
+"prob_up_3d": 0.47,
+"prob_up_5d": 0.44,
+"pred_return_1d": -0.001,
+"pred_return_3d": -0.004,
+"pred_return_5d": -0.011,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj430418_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.54,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.5,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.0,
+"pred_return_5d": 0.0,
+"confidence": 0.47,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj430425_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.47,
+"prob_up_5d": 0.45,
+"pred_return_1d": 0.0,
+"pred_return_3d": -0.004,
+"pred_return_5d": -0.009,
+"confidence": 0.58,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj430425_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.57,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.003,
+"pred_return_3d": 0.0,
+"pred_return_5d": 0.001,
+"confidence": 0.53,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj430476_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.52,
+"prob_up_3d": 0.52,
+"prob_up_5d": 0.48,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.002,
+"pred_return_5d": -0.002,
+"confidence": 0.51,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj430476_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.48,
+"prob_up_3d": 0.48,
+"prob_up_5d": 0.49,
+"pred_return_1d": -0.001,
+"pred_return_3d": -0.001,
+"pred_return_5d": 0.0,
+"confidence": 0.41,
+"reason": "走势信号不清晰，方向接近中性"
+}
+},
+{
+"sample_id": "bj430478_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.48,
+"pred_return_1d": 0.0,
+"pred_return_3d": 0.001,
+"pred_return_5d": -0.002,
+"confidence": 0.49,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj430478_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.49,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.5,
+"pred_return_1d": 0.0,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.0,
+"confidence": 0.4,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj430489_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.48,
+"prob_up_5d": 0.44,
+"pred_return_1d": 0.001,
+"pred_return_3d": -0.003,
+"pred_return_5d": -0.012,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj430489_2025-04-28",
+"prediction": {
+"prob_up_1d": 0.56,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.004,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.002,
+"confidence": 0.56,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj430510_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.48,
+"prob_up_5d": 0.45,
+"pred_return_1d": 0.0,
+"pred_return_3d": -0.004,
+"pred_return_5d": -0.008,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj430510_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.49,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.51,
+"pred_return_1d": -0.001,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.001,
+"confidence": 0.41,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj430564_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.49,
+"prob_up_3d": 0.46,
+"prob_up_5d": 0.43,
+"pred_return_1d": -0.001,
+"pred_return_3d": -0.006,
+"pred_return_5d": -0.014,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj430564_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.0,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.002,
+"confidence": 0.43,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj430685_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.49,
+"prob_up_5d": 0.45,
+"pred_return_1d": 0.001,
+"pred_return_3d": -0.001,
+"pred_return_5d": -0.008,
+"confidence": 0.58,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj430685_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.52,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.0,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.002,
+"confidence": 0.4,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj430718_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.52,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.46,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.0,
+"pred_return_5d": -0.005,
+"confidence": 0.56,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj430718_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.55,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.002,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.001,
+"confidence": 0.46,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj830779_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.47,
+"prob_up_5d": 0.44,
+"pred_return_1d": 0.0,
+"pred_return_3d": -0.004,
+"pred_return_5d": -0.009,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj830779_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.46,
+"prob_up_3d": 0.49,
+"prob_up_5d": 0.52,
+"pred_return_1d": -0.001,
+"pred_return_3d": -0.001,
+"pred_return_5d": 0.001,
+"confidence": 0.47,
+"reason": "单日涨幅较大，短期存在回吐压力"
+}
+},
+{
+"sample_id": "bj830809_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.49,
+"prob_up_5d": 0.46,
+"pred_return_1d": 0.001,
+"pred_return_3d": -0.001,
+"pred_return_5d": -0.006,
+"confidence": 0.56,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj830809_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.54,
+"prob_up_3d": 0.52,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.002,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.002,
+"confidence": 0.46,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj830839_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.48,
+"prob_up_5d": 0.45,
+"pred_return_1d": 0.0,
+"pred_return_3d": -0.003,
+"pred_return_5d": -0.007,
+"confidence": 0.57,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj830839_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.47,
+"prob_up_5d": 0.46,
+"pred_return_1d": 0.0,
+"pred_return_3d": -0.005,
+"pred_return_5d": -0.008,
+"confidence": 0.5,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj830879_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.54,
+"prob_up_3d": 0.52,
+"prob_up_5d": 0.48,
+"pred_return_1d": 0.002,
+"pred_return_3d": 0.002,
+"pred_return_5d": -0.003,
+"confidence": 0.53,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj830879_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.49,
+"prob_up_3d": 0.49,
+"prob_up_5d": 0.48,
+"pred_return_1d": 0.0,
+"pred_return_3d": -0.001,
+"pred_return_5d": -0.003,
+"confidence": 0.42,
+"reason": "走势信号不清晰，方向接近中性"
+}
+},
+{
+"sample_id": "bj830946_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.47,
+"prob_up_5d": 0.43,
+"pred_return_1d": 0.0,
+"pred_return_3d": -0.005,
+"pred_return_5d": -0.012,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj830946_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.49,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.51,
+"pred_return_1d": 0.0,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.001,
+"confidence": 0.39,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj831039_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.52,
+"prob_up_3d": 0.52,
+"prob_up_5d": 0.48,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.002,
+"pred_return_5d": -0.002,
+"confidence": 0.52,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj831039_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.51,
+"pred_return_1d": 0.0,
+"pred_return_3d": 0.0,
+"pred_return_5d": 0.001,
+"confidence": 0.39,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj831087_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.47,
+"prob_up_5d": 0.43,
+"pred_return_1d": 0.0,
+"pred_return_3d": -0.005,
+"pred_return_5d": -0.012,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj831087_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.52,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.51,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.001,
+"confidence": 0.42,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj831167_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.47,
+"prob_up_5d": 0.43,
+"pred_return_1d": 0.0,
+"pred_return_3d": -0.006,
+"pred_return_5d": -0.013,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj831167_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.52,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.0,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.002,
+"confidence": 0.42,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj831175_2024-05-06",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.0,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.001,
+"confidence": 0.42,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj831175_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.52,
+"prob_up_3d": 0.54,
+"prob_up_5d": 0.53,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.002,
+"pred_return_5d": 0.003,
+"confidence": 0.47,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj831195_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.46,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.0,
+"pred_return_5d": -0.005,
+"confidence": 0.56,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj831195_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.52,
+"prob_up_3d": 0.52,
+"prob_up_5d": 0.51,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.001,
+"confidence": 0.4,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj831305_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.46,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.0,
+"pred_return_5d": -0.005,
+"confidence": 0.56,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj831305_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.55,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.002,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.002,
+"confidence": 0.48,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj831370_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.47,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.001,
+"pred_return_5d": -0.003,
+"confidence": 0.55,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj831370_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.53,
+"prob_up_3d": 0.53,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.002,
+"pred_return_5d": 0.002,
+"confidence": 0.44,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj831396_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.46,
+"prob_up_5d": 0.43,
+"pred_return_1d": 0.0,
+"pred_return_3d": -0.006,
+"pred_return_5d": -0.014,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj831396_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.53,
+"prob_up_3d": 0.52,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.001,
+"confidence": 0.44,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj831445_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.54,
+"prob_up_3d": 0.55,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.002,
+"pred_return_3d": 0.005,
+"pred_return_5d": 0.003,
+"confidence": 0.56,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj831445_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.56,
+"prob_up_3d": 0.52,
+"prob_up_5d": 0.53,
+"pred_return_1d": 0.002,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.002,
+"confidence": 0.48,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj831526_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.49,
+"prob_up_5d": 0.46,
+"pred_return_1d": 0.001,
+"pred_return_3d": -0.001,
+"pred_return_5d": -0.007,
+"confidence": 0.56,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj831526_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.49,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.48,
+"pred_return_1d": -0.001,
+"pred_return_3d": 0.0,
+"pred_return_5d": -0.002,
+"confidence": 0.4,
+"reason": "走势信号不清晰，方向接近中性"
+}
+},
+{
+"sample_id": "bj831627_2024-01-22",
+"prediction": {
+"prob_up_1d": 0.49,
+"prob_up_3d": 0.49,
+"prob_up_5d": 0.45,
+"pred_return_1d": -0.002,
+"pred_return_3d": -0.002,
+"pred_return_5d": -0.011,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj831627_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.56,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.003,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.002,
+"confidence": 0.54,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj831641_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.46,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.001,
+"pred_return_5d": -0.005,
+"confidence": 0.56,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj831641_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.54,
+"prob_up_3d": 0.53,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.002,
+"pred_return_5d": 0.002,
+"confidence": 0.46,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj831689_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.52,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.47,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.001,
+"pred_return_5d": -0.004,
+"confidence": 0.55,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj831689_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.47,
+"prob_up_3d": 0.49,
+"prob_up_5d": 0.5,
+"pred_return_1d": -0.001,
+"pred_return_3d": -0.001,
+"pred_return_5d": 0.0,
+"confidence": 0.43,
+"reason": "单日涨幅较大，短期存在回吐压力"
+}
+},
+{
+"sample_id": "bj831726_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.5,
+"prob_up_3d": 0.48,
+"prob_up_5d": 0.44,
+"pred_return_1d": 0.0,
+"pred_return_3d": -0.004,
+"pred_return_5d": -0.01,
+"confidence": 0.58,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj831726_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.56,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.002,
+"pred_return_3d": 0.0,
+"pred_return_5d": 0.001,
+"confidence": 0.46,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj831768_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.46,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.0,
+"pred_return_5d": -0.005,
+"confidence": 0.55,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj831768_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.52,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.51,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.0,
+"pred_return_5d": 0.001,
+"confidence": 0.4,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj831832_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.48,
+"prob_up_5d": 0.44,
+"pred_return_1d": 0.001,
+"pred_return_3d": -0.003,
+"pred_return_5d": -0.009,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj831832_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.52,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.51,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.001,
+"confidence": 0.43,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj831834_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.49,
+"prob_up_3d": 0.47,
+"prob_up_5d": 0.44,
+"pred_return_1d": -0.001,
+"pred_return_3d": -0.005,
+"pred_return_5d": -0.01,
+"confidence": 0.58,
+"reason": "短期涨幅和波动偏极端，均值回归风险上升"
+}
+},
+{
+"sample_id": "bj831834_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.49,
+"prob_up_3d": 0.51,
+"prob_up_5d": 0.51,
+"pred_return_1d": 0.0,
+"pred_return_3d": 0.001,
+"pred_return_5d": 0.001,
+"confidence": 0.39,
+"reason": "近5日偏弱，短线信号略偏下行"
+}
+},
+{
+"sample_id": "bj831856_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.52,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.46,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.0,
+"pred_return_5d": -0.006,
+"confidence": 0.56,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj831856_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.57,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.52,
+"pred_return_1d": 0.003,
+"pred_return_3d": 0.0,
+"pred_return_5d": 0.001,
+"confidence": 0.58,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+},
+{
+"sample_id": "bj831906_2024-01-02",
+"prediction": {
+"prob_up_1d": 0.51,
+"prob_up_3d": 0.52,
+"prob_up_5d": 0.48,
+"pred_return_1d": 0.001,
+"pred_return_3d": 0.002,
+"pred_return_5d": -0.003,
+"confidence": 0.56,
+"reason": "短期动量偏强，但高波动下延续性有限"
+}
+},
+{
+"sample_id": "bj831906_2025-09-23",
+"prediction": {
+"prob_up_1d": 0.49,
+"prob_up_3d": 0.5,
+"prob_up_5d": 0.51,
+"pred_return_1d": -0.001,
+"pred_return_3d": 0.0,
+"pred_return_5d": 0.003,
+"confidence": 0.55,
+"reason": "连续下跌后有反抽可能，但整体趋势仍偏弱"
+}
+}
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "sample_id": "bj430017_2024-01-02",
+    "prediction": {
+      "prob_up_1d": 0.56,
+      "prob_up_3d": 0.54,
+      "prob_up_5d": 0.52,
+      "pred_return_1d": 0.012,
+      "pred_return_3d": 0.018,
+      "pred_return_5d": 0.021,
+      "confidence": 0.43,
+      "reason": "短期连续反弹，5日收益转强，但前期波动极高，追涨风险较大"
+    }
+  },
+  {
+    "sample_id": "bj430017_2025-09-23",
+    "prediction": {
+      "prob_up_1d": 0.46,
+      "prob_up_3d": 0.42,
+      "prob_up_5d": 0.4,
+      "pred_return_1d": -0.004,
+      "pred_return_3d": -0.012,
+      "pred_return_5d": -0.019,
+      "confidence": 0.55,
+      "reason": "连续下跌且5日跌幅扩大，成交未明显放量止跌，短期动量偏弱"
+    }
+  },
+  {
+    "sample_id": "bj430047_2024-01-02",
+    "prediction": {
+      "prob_up_1d": 0.53,
+      "prob_up_3d": 0.51,
+      "prob_up_5d": 0.49,
+      "pred_return_1d": 0.006,
+      "pred_return_3d": 0.008,
+      "pred_return_5d": -0.002,
+      "confidence": 0.41,
+      "reason": "两日大幅反弹并伴随资金放大，但短线涨幅过快，后续回落压力上升"
+    }
+  },
+  {
+    "sample_id": "bj430047_2025-09-23",
+    "prediction": {
+      "prob_up_1d": 0.48,
+      "prob_up_3d": 0.44,
+      "prob_up_5d": 0.43,
+      "pred_return_1d": -0.003,
+      "pred_return_3d": -0.011,
+      "pred_return_5d": -0.016,
+      "confidence": 0.5,
+      "reason": "近期处于下行趋势，最后一日大跌且区间波动放大，短期仍偏弱"
+    }
+  },
+  {
+    "sample_id": "bj430090_2024-01-02",
+    "prediction": {
+      "prob_up_1d": 0.55,
+      "prob_up_3d": 0.52,
+      "prob_up_5d": 0.49,
+      "pred_return_1d": 0.015,
+      "pred_return_3d": 0.018,
+      "pred_return_5d": -0.004,
+      "confidence": 0.38,
+      "reason": "强势放量上涨延续，但30日内波动极端，短线冲高后均值回归风险明显"
+    }
+  }
+]

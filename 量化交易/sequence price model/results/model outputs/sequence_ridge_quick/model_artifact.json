@@ -1,0 +1,37 @@
+{
+  "model": "sequence_ridge",
+  "lookback": 30,
+  "features": [
+    "ret_1d",
+    "ret_2d",
+    "ret_3d",
+    "ret_5d",
+    "range_pct",
+    "close_position",
+    "gap_open",
+    "turnover",
+    "turnover_chg_5d",
+    "money_chg_5d",
+    "log_money",
+    "vol_5d",
+    "vol_20d",
+    "ma_gap_5d",
+    "ma_gap_20d",
+    "market_ret_1d",
+    "market_ret_5d",
+    "rel_ret_5d"
+  ],
+  "horizons": [
+    1,
+    3,
+    5
+  ],
+  "target_layout": [
+    "return_1d",
+    "up_1d",
+    "return_3d",
+    "up_3d",
+    "return_5d",
+    "up_5d"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "model": "tcn",
+  "lookback": 30,
+  "features": [
+    "ret_1d",
+    "ret_2d",
+    "ret_3d",
+    "ret_5d",
+    "range_pct",
+    "close_position",
+    "gap_open",
+    "turnover",
+    "turnover_chg_5d",
+    "money_chg_5d",
+    "log_money",
+    "vol_5d",
+    "vol_20d",
+    "ma_gap_5d",
+    "ma_gap_20d",
+    "market_ret_1d",
+    "market_ret_5d",
+    "rel_ret_5d"
+  ],
+  "epochs": 3,
+  "train_rows": 2475,
+  "test_rows": 3925,
+  "train_start": "2021-12-24",
+  "train_end": "2023-12-29",
+  "test_start": "2024-01-02",
+  "test_end": "2025-09-23",
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 1.857244038581848
+    },
+    {
+      "epoch": 2,
+      "loss": 1.7693267822265626
+    },
+    {
+      "epoch": 3,
+      "loss": 1.7505090951919555
+    }
+  ],
+  "train": {
+    "rows": 2475,
+    "per_horizon": {
+      "1d": {
+        "direction_accuracy": 0.5616161616161616,
+        "return_mae": 0.01735735272960153,
+        "rank_ic": 0.15439273172600956,
+        "auc": 0.5649865729536186,
+        "mean_pred_return": 0.00015824337606318295,
+        "mean_actual_return": 0.0020765437761217707
+      },
+      "3d": {
+        "direction_accuracy": 0.5886868686868687,
+        "return_mae": 0.031241954146164156,
+        "rank_ic": 0.2087588504022488,
+        "auc": 0.6147994042115261,
+        "mean_pred_return": -0.004333390388637781,
+        "mean_actual_return": 0.004770821695381892
+      },
+      "5d": {
+        "direction_accuracy": 0.5648484848484848,
+        "return_mae": 0.03875215128682263,
+        "rank_ic": 0.24243673297808,
+        "auc": 0.6232872800113706,
+        "mean_pred_return": 0.002056051976978779,
+        "mean_actual_return": 0.004427774111174438
+      }
+    }
+  },
+  "test": {
+    "rows": 3925,
+    "per_horizon": {
+      "1d": {
+        "direction_accuracy": 0.5342675159235669,
+        "return_mae": 0.03131843504904554,
+        "rank_ic": 0.042778724043513565,
+        "auc": 0.5203192223130052,
+        "mean_pred_return": 0.0004797590954694897,
+        "mean_actual_return": -2.003620570044168e-05
+      },
+      "3d": {
+        "direction_accuracy": 0.5429299363057325,
+        "return_mae": 0.050066646423746024,
+        "rank_ic": 0.09610354483918408,
+        "auc": 0.5487408025844948,
+        "mean_pred_return": -0.004208116326481104,
+        "mean_actual_return": 0.0013112929719007334
+      },
+      "5d": {
+        "direction_accuracy": 0.5335031847133758,
+        "return_mae": 0.06286043001518855,
+        "rank_ic": 0.07350145296419462,
+        "auc": 0.536916612286437,
+        "mean_pred_return": 0.0005908083985559642,
+        "mean_actual_return": 0.0021013696816541676
+      }
+    }
+  }
+}
