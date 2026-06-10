@@ -77,6 +77,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--lookback", type=int, default=30)
     parser.add_argument("--test-start", default="2024-01-01")
     parser.add_argument("--max-files", type=int, default=0)
+    parser.add_argument("--file-sample-mode", choices=["sorted", "stratified"], default="stratified")
     parser.add_argument("--samples-per-stock", type=int, default=0)
     parser.add_argument("--train-sample", type=int, default=120_000)
     parser.add_argument("--winsor", type=float, default=0.18)
@@ -99,6 +100,8 @@ def reshape_sequences(x_flat: np.ndarray, lookback: int) -> np.ndarray:
 
 
 def standardize(train: np.ndarray, *others: np.ndarray) -> tuple[np.ndarray, list[np.ndarray], dict[str, Any]]:
+    train = np.nan_to_num(train, nan=0.0, posinf=0.0, neginf=0.0)
+    others = tuple(np.nan_to_num(arr, nan=0.0, posinf=0.0, neginf=0.0) for arr in others)
     mean = train.reshape(-1, train.shape[-1]).mean(axis=0)
     std = train.reshape(-1, train.shape[-1]).std(axis=0)
     std[std == 0] = 1.0
@@ -108,7 +111,7 @@ def standardize(train: np.ndarray, *others: np.ndarray) -> tuple[np.ndarray, lis
 
 
 def target_transform(y: np.ndarray) -> np.ndarray:
-    out = y.copy().astype("float32")
+    out = np.nan_to_num(y.copy(), nan=0.0, posinf=0.0, neginf=0.0).astype("float32")
     for col in (0, 2, 4):
         out[:, col] = out[:, col] * 10.0
     return out
@@ -211,6 +214,8 @@ def main() -> None:
     args.output_dir.mkdir(parents=True, exist_ok=True)
     meta, x_flat, y = build_dataset(args)
     x = reshape_sequences(x_flat, args.lookback)
+    x = np.nan_to_num(x, nan=0.0, posinf=0.0, neginf=0.0)
+    y = np.nan_to_num(y, nan=0.0, posinf=0.0, neginf=0.0)
     test_start = pd.Timestamp(args.test_start)
     train_mask = meta["date"] < test_start
     test_mask = meta["date"] >= test_start

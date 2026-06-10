@@ -75,7 +75,23 @@ cd "/Users/lilongjiang/Documents/Git/量化交易/sequence price model"
 
 ## 本地预测平台
 
-训练好 `torch_tcn_v1` 和 `torch_transformer_v1` 后启动：
+最方便的方式是在 Finder 里双击：
+
+```text
+启动序列预测平台.command
+```
+
+它会自动启动后端服务并打开：
+
+```text
+http://127.0.0.1:8877
+```
+
+使用时保持弹出的终端窗口打开；用完后在该终端按 `Control+C` 停止服务。
+
+也可以用命令行启动：
+
+训练好 `torch_tcn_v2_balanced` 和 `torch_transformer_v2_balanced` 后启动：
 
 ```bash
 /Users/lilongjiang/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
@@ -94,6 +110,17 @@ http://127.0.0.1:8877
 - Transformer 的 1/3/5 日上涨概率和预期收益
 - 本次预测使用的历史时间段，例如 `2025-08-12 至 2025-09-23`
 - 两个模型在测试集上的准确率、AUC、Rank IC
+
+## 当前推荐模型
+
+当前平台默认加载平衡抽样后的 v2 模型：
+
+```text
+results/model outputs/torch_tcn_v2_balanced
+results/model outputs/torch_transformer_v2_balanced
+```
+
+v2 修正了 v1 的一个重要问题：v1 使用文件名前 600 个样本训练，样本严重偏向北交所股票；v2 改为按 `bj/sh/sz` 分层抽样训练。
 
 ## 输出
 

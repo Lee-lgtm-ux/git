@@ -83,6 +83,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--lookback", type=int, default=30)
     parser.add_argument("--test-start", default="2024-01-01")
     parser.add_argument("--max-files", type=int, default=0)
+    parser.add_argument(
+        "--file-sample-mode",
+        choices=["sorted", "stratified"],
+        default="stratified",
+        help="stratified samples stock files across bj/sh/sz prefixes; sorted keeps old filename order.",
+    )
     parser.add_argument("--samples-per-stock", type=int, default=0, help="0 means use all eligible windows.")
     parser.add_argument("--train-sample", type=int, default=300_000, help="0 means all training windows.")
     parser.add_argument("--alpha", type=float, default=25.0)
@@ -143,7 +149,9 @@ def read_stock(path: Path, market: pd.DataFrame, winsor: float) -> pd.DataFrame:
 def window_to_vector(window: pd.DataFrame) -> np.ndarray:
     values = window[FEATURES].to_numpy(dtype=float)
     med = np.nanmedian(values, axis=0)
+    med = np.nan_to_num(med, nan=0.0, posinf=0.0, neginf=0.0)
     values = np.where(np.isnan(values), med, values)
+    values = np.nan_to_num(values, nan=0.0, posinf=0.0, neginf=0.0)
     mean = values.mean(axis=0)
     std = values.std(axis=0)
     std[std == 0] = 1.0
@@ -155,9 +163,7 @@ def build_dataset(args: argparse.Namespace) -> tuple[pd.DataFrame, np.ndarray, n
     stock_dir = args.stock_dir or args.data_root / "stock data"
     index_file = args.index_file or args.data_root / "index data" / "sh000001.csv"
     market = read_market(index_file)
-    files = sorted(stock_dir.glob("*.csv"))
-    if args.max_files:
-        files = files[: args.max_files]
+    files = select_stock_files(stock_dir, args.max_files, args.file_sample_mode, args.random_state)
 
     rng = np.random.default_rng(args.random_state)
     meta_rows: list[dict[str, Any]] = []
@@ -199,6 +205,35 @@ def build_dataset(args: argparse.Namespace) -> tuple[pd.DataFrame, np.ndarray, n
         raise RuntimeError("No usable sequence windows found.")
     meta = pd.DataFrame(meta_rows)
     return meta, np.vstack(x_rows), np.asarray(y_rows, dtype=float)
+
+
+def select_stock_files(stock_dir: Path, max_files: int, mode: str, random_state: int) -> list[Path]:
+    files = sorted(stock_dir.glob("*.csv"))
+    if not max_files:
+        return files
+    if mode == "sorted":
+        return files[:max_files]
+
+    rng = np.random.default_rng(random_state)
+    groups: dict[str, list[Path]] = {}
+    for path in files:
+        groups.setdefault(path.stem[:2], []).append(path)
+    prefixes = sorted(groups)
+    base = max_files // len(prefixes)
+    remainder = max_files % len(prefixes)
+    selected: list[Path] = []
+    leftovers: list[Path] = []
+    for index, prefix in enumerate(prefixes):
+        group = groups[prefix]
+        take = min(len(group), base + (1 if index < remainder else 0))
+        chosen_idx = set(rng.choice(len(group), size=take, replace=False).tolist()) if take else set()
+        selected.extend(group[i] for i in sorted(chosen_idx))
+        leftovers.extend(path for i, path in enumerate(group) if i not in chosen_idx)
+    if len(selected) < max_files and leftovers:
+        take = min(max_files - len(selected), len(leftovers))
+        extra_idx = rng.choice(len(leftovers), size=take, replace=False)
+        selected.extend(leftovers[i] for i in sorted(extra_idx))
+    return sorted(selected)
 
 
 def fit_standardized_ridge(x_train: np.ndarray, y_train: np.ndarray, alpha: float) -> tuple[MultiOutputRidge, dict[str, list[float]]]:

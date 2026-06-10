@@ -27,7 +27,7 @@ ROOT = SCRIPT_DIR.parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
-from train_sequence_price_model import FEATURES, HORIZONS, read_market, read_stock
+from train_sequence_price_model import FEATURES, HORIZONS, read_market, read_stock, window_to_vector
 from train_torch_sequence_model import TCNModel, TransformerModel, inverse_predictions
 
 
@@ -40,8 +40,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8877)
     parser.add_argument("--model-root", type=Path, default=DEFAULT_MODEL_ROOT)
-    parser.add_argument("--tcn-dir", default="torch_tcn_v1")
-    parser.add_argument("--transformer-dir", default="torch_transformer_v1")
+    parser.add_argument("--tcn-dir", default="torch_tcn_v2_balanced")
+    parser.add_argument("--transformer-dir", default="torch_transformer_v2_balanced")
     parser.add_argument("--index-file", type=Path, default=DEFAULT_INDEX_FILE)
     return parser.parse_args()
 
@@ -112,7 +112,7 @@ def prepare_latest_sequence(csv_text: str, index_file: Path, lookback: int) -> t
     if len(clean) < lookback:
         raise RuntimeError(f"有效历史不足：需要至少 {lookback} 天含完整特征的数据，当前只有 {len(clean)} 天。")
     window = clean.iloc[-lookback:].copy()
-    values = window[FEATURES].to_numpy(dtype="float32")
+    values = window_to_vector(window).reshape(lookback, len(FEATURES)).astype("float32")
     meta = {
         "code": str(window["code"].iloc[-1]),
         "asof_date": str(window["date"].iloc[-1].date()),

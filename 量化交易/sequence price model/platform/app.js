@@ -39,7 +39,11 @@ els.predictBtn.addEventListener("click", async () => {
     if (!response.ok || data.error) throw new Error(data.error || "预测失败");
     render(data);
   } catch (error) {
-    els.results.innerHTML = `<div class="error">${escapeHtml(error.message)}</div>`;
+    const fileMode = window.location.protocol === "file:";
+    const hint = fileMode
+      ? "当前是直接打开 HTML 文件。请使用 start_platform.sh 或 启动序列预测平台.command 启动后，从 http://127.0.0.1:8877 访问。"
+      : "请确认本地后端服务正在运行：scripts/serve_sequence_prediction_platform.py。";
+    els.results.innerHTML = `<div class="error">${escapeHtml(error.message)}<br />${escapeHtml(hint)}</div>`;
   } finally {
     els.predictBtn.disabled = false;
     els.predictBtn.textContent = "开始预测";
